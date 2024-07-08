@@ -1,3 +1,5 @@
+## Converter a string para lista no arquivo routers.py
+
 from fastapi import APIRouter
 from converter import sync_converter
 
@@ -20,3 +22,8 @@ def converter(from_currency: str, to_currencies: str, price: float):
         result.append(response)
 
     return result
+
+
+
+## Sempre que reiniciar o VScode 
+source .env
