@@ -25,7 +25,7 @@ def sync_converter(from_currency: str, to_corrency:str, price: float):
     return price * exchange_rate
 
 
-def async_converter(from_currency: str, to_corrency:str, price: float):
+async def async_converter(from_currency: str, to_corrency:str, price: float):
     url = f'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={from_currency}&to_currency={to_corrency}&apikey={ALPHAVANTAGE_APIKEY}'
 
     try:
