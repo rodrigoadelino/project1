@@ -18,7 +18,7 @@ def sync_converter(from_currency: str, to_corrency:str, price: float):
 
     
     if "Realtime Currency Exchange Rate" not in data:
-        raise HTTPException(status_code=400, detail='Realtime Currency Exchange Rate" not in response')
+        raise HTTPException(status_code=400, detail=f'Realtime Currency Exchange Rate" not in response{data}')
     
     exchange_rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
 
@@ -37,7 +37,7 @@ async def async_converter(from_currency: str, to_corrency:str, price: float):
         raise HTTPException(status_code=400, detail=error)
     
     if "Realtime Currency Exchange Rate" not in data:
-        raise HTTPException(status_code=400, detail='Realtime Currency Exchange Rate" not in response')
+        raise HTTPException(status_code=400, detail=f'Realtime Currency Exchange Rate" not in response{data}')
     
     exchange_rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
 

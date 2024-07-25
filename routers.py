@@ -27,7 +27,7 @@ def converter(from_currency: str, to_currencies: str, price: float):
 async def async_converter_router(from_currency: str, to_currencies: str, price: float):
     to_currencies = to_currencies.split(',')
 
-    coroutines = []
+    couroutines = []
 
     for currency in to_currencies:
         coro = async_converter(
@@ -36,7 +36,7 @@ async def async_converter_router(from_currency: str, to_currencies: str, price: 
             price=price
         )
 
-        coroutines.append(coro)
+        couroutines.append(coro)
 
-    result = await gather(*coro)
-    return result
+    result = await gather(*couroutines)
+    return result   
